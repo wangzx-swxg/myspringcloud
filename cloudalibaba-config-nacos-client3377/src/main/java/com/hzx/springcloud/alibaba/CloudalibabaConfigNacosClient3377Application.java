@@ -11,6 +11,7 @@ public class CloudalibabaConfigNacosClient3377Application {
     public static void main(String[] args) {
         SpringApplication.run(CloudalibabaConfigNacosClient3377Application.class, args);
         System.out.println("启动成功");
+        
     }
 
 }

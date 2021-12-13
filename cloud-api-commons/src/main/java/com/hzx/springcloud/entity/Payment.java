@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 @ApiModel(value = "Payment对象",description = "支付信息")
 public class Payment {
 
-    private int id;
+    private long id;
     private String serial;
 }

@@ -22,7 +22,9 @@ public class RateLimitController {
     }
 
     @GetMapping("/rateLimit/byUrl")
-    @SentinelResource(value = "byUrl")
+    @SentinelResource(value = "byUrl",
+            blockHandlerClass = CustomerBlockHandler.class,
+            blockHandler = "handlerException1")
     public ResultVO byUrl() {
         return new ResultVO(200, "按url限流测试OK", new Payment(2020L, "serial002"));
     }
